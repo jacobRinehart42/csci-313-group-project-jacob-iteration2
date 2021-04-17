@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { RoutingService } from "../routing.service";
 import { ItemsService } from "../items.service";
+import {AccountService } from "../account.service";
 
 @Component({
   selector: "app-edit-item",
@@ -10,7 +11,7 @@ import { ItemsService } from "../items.service";
 export class EditItemComponent implements OnInit {
   currentItem;
 
-  constructor(private route: RoutingService, public its: ItemsService) {}
+  constructor(private route: RoutingService, public its: ItemsService, private actService: AccountService) {}
 
   ngOnInit() {
     this.currentItem = this.its.selectedItem;
@@ -20,7 +21,7 @@ export class EditItemComponent implements OnInit {
     name,
     askingPrice,
     nicheMarket,
-    TimeRanges,
+    tags,
     description,
     dimensions,
     conditionAndAge,
@@ -30,9 +31,9 @@ export class EditItemComponent implements OnInit {
       this.currentItem.itemId,
       name,
       askingPrice,
-      "seller",
+      this.actService.signedInUser.publicName,
       nicheMarket,
-      TimeRanges,
+      tags,
       description,
       dimensions,
       conditionAndAge,

@@ -39,19 +39,19 @@
 
   <div class="col test">
 
-    <input type="text" placeholder="Pokemon Cards" value="{{this.currentItem.name}}">
+    <input type="text" placeholder="Pokemon Cards" value="{{this.currentItem.name}}" #name>
 
     <br>
     <br>
 
-    <input type="text" placeholder="#pokemon #cards"  value="{{this.currentItem.tags}}">
+    <input type="text" placeholder="#pokemon #cards"  value="{{this.currentItem.tags}}" #tags>
 
     <br>
     <br>
 
     <!-- This is the commented out function load() in TS -->
     <form id="myForm">
-      <select id="selectCat" value="{{this.currentItem.nicheMarket}}">
+      <select id="selectCat" value="{{this.currentItem.nicheMarket}}" #nicheMarket>
     <option>Select a Category</option>
     <option>Art</option>
     <option>Cards</option>
@@ -65,19 +65,19 @@
     <br>
 
     <textarea rows="5" cols="50" name="text" placeholder="It's a one of a kind first edition base set booster pack with 10 cards."
-    value="{{this.currentItem.description}}"></textarea>
+    value="{{this.currentItem.description}}"  #description></textarea>
 
     <br>
     <br>
 
-    <input type="text" placeholder="LxWxH" value="{{this.currentItem.dimensions}}">
+    <input type="text" placeholder="LxWxH" value="{{this.currentItem.dimensions}}" #dimensions>
 
     <br>
     <br>
 
     <!-- This is the commented out function load() in TS -->
     <form id="myForm">
-      <select id="selectCare" value="{{this.currentItem.conditionAndAge}}">
+      <select id="selectCare" value="{{this.currentItem.conditionAndAge}}" #conditionAndAge>
     <option>Choose a Quality</option>
     <option>Very Poor</option>
     <option>Poor</option>
@@ -94,13 +94,13 @@
     <br>
     <br>
 
-    <input type="text" placeholder="$0.00" value="{{this.currentItem.askingPrice}}">
+    <input type="text" placeholder="$0.00" value="{{this.currentItem.askingPrice}}" #askingPrice>
 
     <br>
     <br>
 
     <textarea rows="5" cols="50" name="text" placeholder="This booster pack is not bent and has been taken care of, unlike some heathens." 
-    value="{{this.currentItem.otherInfo}}"></textarea>
+    value="{{this.currentItem.otherInfo}}" #otherInfo></textarea>
 
   </div>
 
@@ -113,7 +113,7 @@
 
   <button type="button" class="btn btn-primary back" (click)="switchToMyItems()" >Go Back!</button>
 
-  <button type="button" class="btn btn-primary back"  >Save!</button>
+  <button type="button" class="btn btn-primary back" (click)="save(name.value, askingPrice.value ,  nicheMarket.value, tags.value, description.value, dimensions.value, conditionAndAge.value, otherInfo.value)">Save!</button>
 
   <button type="button" class="btn btn-primary" >Being Negotiated</button>
 
