@@ -1,0 +1,59 @@
+h1 {
+  text-align: center;
+  color: #007bff;
+}
+
+p {
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+label {
+  font-weight: bold;
+  text-align: center;
+}
+
+button {
+  padding: 15px;
+  font-size: medium;
+}
+
+button:hover {
+  background-color: darkslateblue;
+  color: white;
+}
+
+.photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  filter: invert(90%);
+}
+
+.center {
+  text-align: center;
+}
+
+.row {
+  width: 100%;
+}
+
+.col try {
+  text-align: right;
+  float: left;
+}
+
+.col test {
+  text-align: left;
+  float: right;
+}
+
+.important {
+  color: #007bff;
+}
+
+.back {
+  margin-right: 10px;
+}

@@ -1,0 +1,57 @@
+<body>
+  <div class="container">
+    <h2> {{currentItem.name}}</h2>
+    <table>
+      <tr>
+        <td style="width: 200px;"> <b>Name: </b></td>
+        <td> {{currentItem.name}} </td>
+      </tr>
+      <tr>
+        <td> <b>Asking Price: </b></td>
+        <td> {{currentItem.askingPrice}} </td>
+      </tr>
+      <tr>
+        <td> <b>Under Negotiation: </b></td>
+        <td> {{currentItem.underNegotiation}} </td>
+      </tr>
+      <tr>
+        <td> <b>Seller: </b></td>
+        <td> {{currentItem.seller}} </td>
+      </tr>
+      <tr>
+        <td> <b>Niche Markets: </b></td>
+        <td> {{currentItem.nicheMarket}} </td>
+      </tr>
+      <tr>
+        <td> <b>Tags: </b></td>
+        <td> {{currentItem.tags}} </td>
+      </tr>
+      <tr>
+        <td> <b>Description: </b></td>
+        <td> {{currentItem.description}} </td>
+      </tr>
+      <tr>
+        <td> <b>Dimensions: </b></td>
+        <td> {{currentItem.dimensions}} </td>
+      </tr>
+      <tr>
+        <td> <b>Condition / Age:  </b></td>
+        <td> {{currentItem.conditionAndAge}} </td>
+      </tr>
+      <tr>
+        <td> <b>Other Information: </b></td>
+        <td> {{currentItem.otherInfo}} </td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="editButton btn btn-primary" type="button" (click) = "onBackToItemsPage()">Back To Items Page</button>
+        </td>
+        <td> </td>
+      </tr>
+    </table>
+  </div>
+</body>
