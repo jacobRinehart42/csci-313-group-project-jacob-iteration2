@@ -99,12 +99,14 @@
     <br>
     <br>
 
-    <textarea rows="5" cols="50" name="text" placeholder="This booster pack is not bent and has been taken care of, unlike some heathens." 
+    <textarea rows="5" cols="50" name="text" placeholder="This booster pack is not bent and has been taken care of, unlike some heathens."
     value="{{this.currentItem.otherInfo}}" #otherInfo></textarea>
 
   </div>
 
 </div>
+
+<p>Being Negotiated: {{this.currentItem.underNegotiation}}</p>
 
 <br>
 <br>
@@ -115,7 +117,7 @@
 
   <button type="button" class="btn btn-primary back" (click)="save(name.value, askingPrice.value ,  nicheMarket.value, tags.value, description.value, dimensions.value, conditionAndAge.value, otherInfo.value)">Save!</button>
 
-  <button type="button" class="btn btn-primary" >Being Negotiated</button>
+  <button type="button" class="btn btn-primary" (click) = "underNegotiation()">Toggle Being Negotiated</button>
 
   <br>
   <br>

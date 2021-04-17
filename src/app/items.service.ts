@@ -8,7 +8,7 @@ export class ItemsService {
     owningUserId: 1,
     name: "null",
     askingPrice: "null",
-    underNegotiation: "",
+    underNegotiation: "No",
     seller: "null",
     nicheMarket: "null",
     tags: "null",
@@ -26,7 +26,7 @@ export class ItemsService {
       owningUserId: 5,
       name: "Pocket Knife",
       askingPrice: "$45.00",
-      underNegotiation: "",
+      underNegotiation: "No",
       seller: "Jimmy",
       nicheMarket: "Toys",
       tags: "Knife",
@@ -40,7 +40,7 @@ export class ItemsService {
       owningUserId: 3,
       name: "Pokemon 25th anniversary card",
       askingPrice: "$25.00",
-      underNegotiation: "",
+      underNegotiation: "No",
       seller: "JackAnderson",
       nicheMarket: "Cards",
       tags: "Pokemon",
@@ -54,7 +54,7 @@ export class ItemsService {
       owningUserId: 3,
       name: "Halo Reach",
       askingPrice: "$20.00",
-      underNegotiation: "",
+      underNegotiation: "No",
       seller: "JackAnderson",
       nicheMarket: "Games",
       tags: "Games",
@@ -161,6 +161,15 @@ export class ItemsService {
     for (var i = 0; i < this.items.length; i++) {
       if (this.items[i].itemId == itemId) {
         this.items.splice(i, 1);
+        return;
+      }
+    }
+  }
+
+  updateNegotiationStatus(itemId: number, newStatus: string){
+    for(var i = 0; i < this.items.length; i++){
+      if(this.items[i].itemId == itemId){
+        this.items[i].underNegotiation = newStatus;
         return;
       }
     }

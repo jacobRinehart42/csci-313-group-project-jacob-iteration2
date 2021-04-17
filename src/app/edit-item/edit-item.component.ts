@@ -45,4 +45,15 @@ export class EditItemComponent implements OnInit {
   switchToMyItems() {
     this.route.onShowMyItems();
   }
+
+  underNegotiation(){
+    var newStatus = "";
+    if(this.currentItem.underNegotiation == "Yes"){
+      newStatus = "No";
+    }
+    else{
+      newStatus = "Yes";
+    }
+    this.its.updateNegotiationStatus(this.its.selectedItem.itemId, newStatus);
+  }
 }
