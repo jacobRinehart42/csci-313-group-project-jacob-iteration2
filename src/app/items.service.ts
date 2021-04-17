@@ -157,5 +157,14 @@ export class ItemsService {
     }
   }
 
+  deleteItem(itemId: number) {
+    for (var i = 0; i < this.items.length; i++) {
+      if (this.items[i].itemId == itemId) {
+        this.items.splice(i, 1);
+        return;
+      }
+    }
+  }
+
   constructor(private accnt: AccountService) {}
 }

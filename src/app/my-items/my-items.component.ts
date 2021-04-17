@@ -24,8 +24,28 @@ export class MyItemsComponent implements OnInit {
 
   }
 
-  showEditItem() {
+  showEditItem(myItem : {
+    itemId,
+    owningUserId,
+    name,
+    askingPrice,
+    underNegotiation,
+    seller,
+    nicheMarket,
+    tags,
+    description,
+    dimensions,
+    conditionAndAge,
+    otherInfo
+  }) {
+    this.its.selectedItem = myItem;
     this.routService.onShowEditItem();
+  }
+
+  deleteItem(itemId: number){
+    this.its.deleteItem(itemId);
+    this.its.getAllItemsForUser(this.signedInUser.id);
+    this.myItems = this.its.thisUsersItems;
   }
 
 }

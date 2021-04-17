@@ -27,8 +27,8 @@
           <hr />
 
           <div>
-            <button class="editButton btn btn-primary" type="button" (click)="showEditItem()">Edit!</button>
-            <button class="editButton btn btn-primary" type="button" >Delete</button>
+            <button class="editButton btn btn-primary" type="button" (click)="showEditItem(myItem)">Edit!</button>
+            <button class="editButton btn btn-primary" type="button" (click) = "deleteItem(myItem.itemId)">Delete</button>
           </div>
     
         </div>

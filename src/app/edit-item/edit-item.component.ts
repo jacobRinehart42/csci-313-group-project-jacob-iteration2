@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RoutingService } from '../routing.service';
+import { ItemsService } from '../items.service';
 
 @Component({
   selector: 'app-edit-item',
@@ -8,9 +9,12 @@ import { RoutingService } from '../routing.service';
 })
 export class EditItemComponent implements OnInit {
 
-  constructor (private route: RoutingService) {}
+  currentItem;
+
+  constructor (private route: RoutingService, public its: ItemsService) {}
 
   ngOnInit() {
+    this.currentItem = this.its.selectedItem;
   }
 
   save(): void {
@@ -19,7 +23,6 @@ export class EditItemComponent implements OnInit {
 
   switchToMyItems() {
     this.route.onShowMyItems();
-
   }
 
 }

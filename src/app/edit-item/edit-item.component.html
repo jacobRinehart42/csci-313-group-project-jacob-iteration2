@@ -2,56 +2,56 @@
 
 <br>
 
-<div class="center" >
+<div class="center">
   <label>PICTURES IF I FIGURE THEM OUT</label>
 </div>
 
 <br>
 
-<div class="row" >
+<div class="row">
 
-  <div class="col try" >
+  <div class="col try">
 
-<p class="important" >Item Name: *</p>
+    <p class="important">Item Name: *</p>
 
-<p> Tags: </p>
+    <p> Tags: </p>
 
-<p class="important" >Niche Market: *</p> 
+    <p class="important">Niche Market: *</p>
 
-<p class="important" >Item Description: *</p>
+    <p class="important">Item Description: *</p>
 
-<br>
-<br>
-<br>
-<br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-<p>Dimensions: </p>
+    <p>Dimensions: </p>
 
-<p class="important" >Condition: *</p>
-  
-<p> Age:  </p>
+    <p class="important">Condition: *</p>
 
-<p class="important" >Asking Price: *</p>
+    <p> Age: </p>
 
-<p>Other Information: </p>
+    <p class="important">Asking Price: *</p>
+
+    <p>Other Information: </p>
 
   </div>
 
-  <div class="col test" >
+  <div class="col test">
 
-<input type="text" placeholder="Pokemon Cards">
+    <input type="text" placeholder="Pokemon Cards" value="{{this.currentItem.name}}">
 
-<br>
-<br>
+    <br>
+    <br>
 
-<input type="text" placeholder="#pokemon #cards">
+    <input type="text" placeholder="#pokemon #cards"  value="{{this.currentItem.tags}}">
 
-<br>
-<br>
+    <br>
+    <br>
 
-<!-- This is the commented out function load() in TS -->
-<form id="myForm" >
-  <select id="selectCat">
+    <!-- This is the commented out function load() in TS -->
+    <form id="myForm">
+      <select id="selectCat" value="{{this.currentItem.nicheMarket}}">
     <option>Select a Category</option>
     <option>Art</option>
     <option>Cards</option>
@@ -60,23 +60,24 @@
     <option>Movies</option>
     <option>Toys</option>
   </select>
-</form>
+    </form>
 
-<br>
+    <br>
 
-<textarea rows="5" cols="50" name="text" placeholder="It's a one of a kind first edition base set booster pack with 10 cards."></textarea>
+    <textarea rows="5" cols="50" name="text" placeholder="It's a one of a kind first edition base set booster pack with 10 cards."
+    value="{{this.currentItem.description}}"></textarea>
 
-<br>
-<br>
+    <br>
+    <br>
 
-<input type="text" placeholder="LxWxH">
+    <input type="text" placeholder="LxWxH" value="{{this.currentItem.dimensions}}">
 
-<br>
-<br>
+    <br>
+    <br>
 
-<!-- This is the commented out function load() in TS -->
-<form id="myForm" >
-  <select id="selectCare">
+    <!-- This is the commented out function load() in TS -->
+    <form id="myForm">
+      <select id="selectCare" value="{{this.currentItem.conditionAndAge}}">
     <option>Choose a Quality</option>
     <option>Very Poor</option>
     <option>Poor</option>
@@ -84,21 +85,22 @@
     <option>Almost New</option>
     <option>Brand Spanking New</option>
   </select>
-</form>
+    </form>
 
-<br>
+    <br>
 
-<input type="text" placeholder="12 years old">
+    <input type="text" placeholder="12 years old">
 
-<br>
-<br>
+    <br>
+    <br>
 
-<input type="text" placeholder="$0.00" >
+    <input type="text" placeholder="$0.00" value="{{this.currentItem.askingPrice}}">
 
-<br>
-<br>
+    <br>
+    <br>
 
-<textarea rows="5" cols="50" name="text" placeholder="This booster pack is not bent and has been taken care of, unlike some heathens."></textarea>
+    <textarea rows="5" cols="50" name="text" placeholder="This booster pack is not bent and has been taken care of, unlike some heathens." 
+    value="{{this.currentItem.otherInfo}}"></textarea>
 
   </div>
 
@@ -107,15 +109,15 @@
 <br>
 <br>
 
-<div class="center" >
+<div class="center">
 
-<button type="button" class="btn btn-primary back" (click)="switchToMyItems()" >Go Back!</button>
+  <button type="button" class="btn btn-primary back" (click)="switchToMyItems()" >Go Back!</button>
 
-<button (click)="save()" type="button" class="btn btn-primary back" (click)="save()" >Save!</button>
+  <button (click)="save()" type="button" class="btn btn-primary back" (click)="save()" >Save!</button>
 
-<button type="button" class="btn btn-primary" >Being Negotiated</button>
+  <button type="button" class="btn btn-primary" >Being Negotiated</button>
 
-<br>
-<br>
+  <br>
+  <br>
 
 </div>
